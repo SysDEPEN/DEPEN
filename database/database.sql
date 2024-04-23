@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS users(
+    id SERIAL PRIMARY KEY,
+    nome varchar(256) NOT NULL,
+    senha varchar(256) NOT NULL,
+    role SMALLINT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS documentos();
+CREATE TABLE IF NOT EXISTS endereco();
+CREATE TABLE IF NOT EXISTS protocolos();
