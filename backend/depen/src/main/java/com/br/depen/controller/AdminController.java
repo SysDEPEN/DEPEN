@@ -8,18 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.br.depen.entities.UserEntity;
-import com.br.depen.services.UserService;
+import com.br.depen.entities.AdminEntity;
+import com.br.depen.services.AdminService;
+
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/admin")
+public class AdminController {
 
 	@Autowired
-	private UserService userService;
+	private AdminService adminService;
 	
 	@GetMapping
-	public ResponseEntity<List<UserEntity>> FindAll(){
-		return ResponseEntity.ok(userService.FindAll());
+	public ResponseEntity<List<AdminEntity>> FindAll(){
+		return ResponseEntity.ok(adminService.FindAll());
 	}
 }
