@@ -19,22 +19,22 @@ public class UserEntity {
 	@GeneratedValue( strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@Column( name = "name")
+	@Column( name = "nome")
 	private String name;
 	
-	@Column( name = "document")
+	@Column( name = "documento")
 	private String document;
 	
-	@Column( name = "sex")
+	@Column( name = "sexo")
 	private String sex;
 	
-	@Column( name = "date_born")
+	@Column( name = "data_nasc")
 	private Date date_born;
 	
 	@Column( name = "email")
 	private String email;
 	
-	@Column( name = "password")
+	@Column( name = "senha")
 	private String password;
 	
 	@Column( name = "role")
