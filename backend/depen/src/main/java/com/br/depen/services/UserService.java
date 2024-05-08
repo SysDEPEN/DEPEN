@@ -18,5 +18,8 @@ public class UserService {
 		return repository.findAll();
 	}
 
+	public UserEntity saveUser(UserEntity user) {
+        return repository.save(user);
+    }
 	
 }
