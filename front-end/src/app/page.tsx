@@ -4,7 +4,6 @@ import Image from "next/image";
 
 import HomeExample from "../assets/frames/home-example.png";
 
-
 export default function Home() {
   return (
     <main>
@@ -17,10 +16,10 @@ export default function Home() {
                 <div className="mx-auto max-w-2xl">
                   <div className="max-w-lg">
                     <div className="md:mt-24 mt-32 lg:mt-16"></div>
-                    <h1 className="mt-10 lg:text-3xl lg:max-w-sm font-bold tracking-tight text-gray-900 text-6xl">
+                    <h1 className="mt-10 lg:text-4xl lg:max-w-sm font-bold tracking-tight text-gray-900 text-6xl">
                       O melhor caminho para carteira de visitantes
                     </h1>
-                    <p className="mt-6 text-md lg:max-w-md leading-8 text-gray-600">
+                    <p className="mt-6 text-lg lg:max-w-md leading-8 text-gray-600">
                       Bem-vindo ao nosso serviço dedicado a simplificar o
                       processo de obtenção de carteirinhas para visitantes de
                       entes em instituições correcionais. Cadastre-se agora e
@@ -29,8 +28,24 @@ export default function Home() {
                     <div className="mt-10 flex items-center gap-x-6">
                       <a
                         href="#"
-                        className="rounded-md bg-[#0135BA] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#2b4a99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                      >
+                        className="
+                          rounded-md 
+                          w-[180px]
+                          flex
+                          justify-center
+                          items-center 
+                          bg-[#0135BA] 
+                          py-2.5 
+                          text-sm 
+                          font-semibold 
+                          text-white 
+                          shadow-lg
+                          hover:bg-[#2b4a99] 
+                          focus-visible:outline 
+                          focus-visible:outline-2 
+                          focus-visible:outline-offset-2 
+                          focus-visible:outline-indigo-600
+                        ">
                         Começar
                       </a>
                     </div>
