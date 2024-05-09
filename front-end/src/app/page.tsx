@@ -1,34 +1,61 @@
+import FooterComponent from "@/components/Footer/footer";
+import HeaderComponent from "@/components/Header/header";
+import Image from "next/image";
+
+import HomeExample from "../assets/frames/home-example.png";
+
 
 export default function Home() {
   return (
     <main>
       <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Customers also purchased
-          </h2>
-
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            <div className="group relative">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"></div>
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <a href="#">
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-0"
-                      ></span>
-                      Basic Tee
-                    </a>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">Black</p>
+        <HeaderComponent />
+        <div className="bg-white">
+          <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+            <div className="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
+              <div className="px-6 lg:px-0 lg:pt-4">
+                <div className="mx-auto max-w-2xl">
+                  <div className="max-w-lg">
+                    <div className="md:mt-24 mt-32 lg:mt-16"></div>
+                    <h1 className="mt-10 lg:text-3xl lg:max-w-sm font-bold tracking-tight text-gray-900 text-6xl">
+                      O melhor caminho para carteira de visitantes
+                    </h1>
+                    <p className="mt-6 text-md lg:max-w-md leading-8 text-gray-600">
+                      Bem-vindo ao nosso serviço dedicado a simplificar o
+                      processo de obtenção de carteirinhas para visitantes de
+                      entes em instituições correcionais. Cadastre-se agora e
+                      facilite suas visitas com apenas alguns cliques.
+                    </p>
+                    <div className="mt-10 flex items-center gap-x-6">
+                      <a
+                        href="#"
+                        className="rounded-md bg-[#0135BA] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#2b4a99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      >
+                        Começar
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-sm font-medium text-gray-900">$35</p>
+              </div>
+              <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+                <div
+                  className="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 md:-mr-20 lg:-mr-36"
+                  aria-hidden="true"
+                />
+                <div className="md:rounded-3xl">
+                  <Image
+                    src={HomeExample}
+                    alt="home page frame"
+                    width={1008}
+                    height={591}
+                  ></Image>
+                </div>
               </div>
             </div>
+            <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
           </div>
         </div>
+        <FooterComponent />
       </div>
     </main>
   );
