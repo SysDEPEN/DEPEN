@@ -22,7 +22,12 @@ export default function MixedForm() {
     input1: "",
     select2: "",
     input2: "",
+    select3:"",
     input3: "",
+    input4:"",
+    input5:"",
+    input6:"",
+    select4:"",
   });
 
   const handleChange = (
@@ -51,9 +56,13 @@ export default function MixedForm() {
       inputType: "text",
     },
     { type: "select", label: "Tipo de visitação", name: "select1" },
-    { type: "input", label: "Telefone", name: "input2", inputType: "text" },
+    { type: "input", label: "Telefone", name: "input3", inputType: "text" },
     { type: "select", label: "Estado", name: "select2" },
-    { type: "select", label: "Select 2", name: "select2" },
+    { type: "select", label: "Cidade", name: "select3" },
+    { type: "input", label: "Bairro", name: "input4", inputType: "text" },
+    { type: "input", label: "Rua", name: "input5", inputType: "text" },
+    { type: "input", label: "Número", name: "input6", inputType: "text" },
+    { type: "select", label: "Assunto", name: "select4" },
   ];
 
   return (
@@ -71,14 +80,17 @@ export default function MixedForm() {
           px-8
           pt-6
           pb-8
-          mb-4
+          m-2
+          mb-2
+          h-3/4
           w-full
-          max-w-md"
+          max-w-3xl"
+          
       >
         {formFields.map((field, index) => (
-          <div key={index} className="mb-4">
+          <div key={index} className="mb-4 m flex-wrap max-w-2xl ">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="block text-gray-700 font-bold mb-2 "
               htmlFor={field.name}
             >
               {field.label}
