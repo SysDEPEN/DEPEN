@@ -67,14 +67,18 @@ export default function MixedForm() {
 
   return (
     <section className="w-full flex h-[45vw] justify-center items-center bg-white">
+      
+   
       <form
         className="
-          flex
+          grid
+          grid-flow-col
+          grid-rows-5
+          gap-8
           bg-[#DAE2E8]
           shadow-lg
           justify-center
           items-center
-          flex-col
           shadow-[#afb6bb]
           rounded
           px-8
@@ -84,9 +88,10 @@ export default function MixedForm() {
           mb-2
           h-3/4
           w-full
-          max-w-3xl"
+          max-w-2xl"
           
       >
+
         {formFields.map((field, index) => (
           <div key={index} className="mb-4 m flex-wrap max-w-2xl ">
             <label
@@ -133,7 +138,25 @@ export default function MixedForm() {
             )}
           </div>
         ))}
+    
+
+        <div className="
+        grid
+        grid-cols-subgrid
+        gap-8
+
+        ">
+
+
+        <button className="flex items-center shadow-lg justify-center p-4 bg-[#1348D0] rounded-md w-[177px] h-[39px]" >Salvar rascunho</button>
+
+        <button className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">Enviar documentos</button>
+    
+        </div>
+
       </form>
+   
+  
     </section>
   );
 }
