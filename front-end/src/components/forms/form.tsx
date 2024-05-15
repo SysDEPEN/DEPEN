@@ -66,18 +66,19 @@ export default function MixedForm() {
   ];
 
   return (
-    <section className="w-full flex h-[45vw] justify-center items-center bg-white">
-
-      <div className="flex justify-center
-          items-center flex-col w-full px-8
-          pt-6
-          pb-8   shadow-lg
-          max-w-2xl
-          h-[25vw ]
-          shadow-[#afb6bb]
-          rounded  bg-[#DAE2E8]">
-
-
+    <section className=" my-20 w-full flex h-[45vw] justify-center items-center ">
+      <div
+        className="
+        flex justify-center
+        items-center flex-col w-full px-8
+        pt-6
+        pb-8   
+        shadow-lg
+        max-w-2xl
+      shadow-[#afb6bb]
+        rounded
+        bg-[#DAE2E8]"
+      >
         <form
           className="
           grid
@@ -89,9 +90,7 @@ export default function MixedForm() {
           mb-2
           w-full
           "
-
         >
-
           {formFields.map((field, index) => (
             <div key={index} className="mb-4 m flex-wrap max-w-2xl ">
               <label
@@ -138,15 +137,17 @@ export default function MixedForm() {
               )}
             </div>
           ))}
-
         </form>
-        <button className="flex items-center shadow-lg justify-center p-4 bg-[#1348D0] rounded-md w-[177px] h-[39px]" >Salvar rascunho</button>
+        <div className="flex justify-around w-full">
+          <button className="flex mx-2 items-center shadow-lg justify-center p-4 bg-[#1348D0] rounded-md w-[177px] h-[39px]">
+            Salvar rascunho
+          </button>
 
-
-        <button className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">Enviar documentos</button>
-
+          <button className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">
+            Enviar documentos
+          </button>
+        </div>
       </div>
-
     </section>
   );
 }

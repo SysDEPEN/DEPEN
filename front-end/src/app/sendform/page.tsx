@@ -4,7 +4,7 @@ import MixedForm from "@/components/forms/form";
 
 export default function SendDocument() {
     return (
-      <section className="">
+      <section className="bg-white">
         <HeaderComponent />
         <MixedForm></MixedForm>
         <FooterComponent />
