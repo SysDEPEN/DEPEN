@@ -22,12 +22,12 @@ export default function MixedForm() {
     input1: "",
     select2: "",
     input2: "",
-    select3:"",
+    select3: "",
     input3: "",
-    input4:"",
-    input5:"",
-    input6:"",
-    select4:"",
+    input4: "",
+    input5: "",
+    input6: "",
+    select4: "",
   });
 
   const handleChange = (
@@ -67,42 +67,42 @@ export default function MixedForm() {
 
   return (
     <section className="w-full flex h-[45vw] justify-center items-center bg-white">
-      
-   
-      <form
-        className="
+
+      <div className="flex justify-center
+          items-center flex-col w-full px-8
+          pt-6
+          pb-8   shadow-lg
+          max-w-2xl
+          h-[25vw ]
+          shadow-[#afb6bb]
+          rounded  bg-[#DAE2E8]">
+
+
+        <form
+          className="
           grid
           grid-flow-col
           grid-rows-5
-          gap-8
-          bg-[#DAE2E8]
-          shadow-lg
-          justify-center
-          items-center
-          shadow-[#afb6bb]
-          rounded
-          px-8
-          pt-6
-          pb-8
+          gap-8 
+          
           m-2
           mb-2
-          h-3/4
           w-full
-          max-w-2xl"
-          
-      >
+          "
 
-        {formFields.map((field, index) => (
-          <div key={index} className="mb-4 m flex-wrap max-w-2xl ">
-            <label
-              className="block text-gray-700 font-bold mb-2 "
-              htmlFor={field.name}
-            >
-              {field.label}
-            </label>
-            {field.type === "select" ? (
-              <select
-                className="
+        >
+
+          {formFields.map((field, index) => (
+            <div key={index} className="mb-4 m flex-wrap max-w-2xl ">
+              <label
+                className="block text-gray-700 font-bold mb-2 "
+                htmlFor={field.name}
+              >
+                {field.label}
+              </label>
+              {field.type === "select" ? (
+                <select
+                  className="
                   shadow 
                   appearance-none 
                   border 
@@ -114,49 +114,39 @@ export default function MixedForm() {
                   leading-tight 
                   focus:outline-none 
                   focus:shadow-outline"
-                id={field.name}
-                name={field.name}
-                value={formData[field.name]}
-                onChange={handleChange}
-              >
-                <option value="">Selecione uma opção</option>
-                {selectOptions.map((opt) => (
-                  <option key={opt.value} value={opt.value}>
-                    {opt.label}
-                  </option>
-                ))}
-              </select>
-            ) : (
-              <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id={field.name}
-                name={field.name}
-                type={field.inputType}
-                value={formData[field.name]}
-                onChange={handleChange}
-              />
-            )}
-          </div>
-        ))}
-    
+                  id={field.name}
+                  name={field.name}
+                  value={formData[field.name]}
+                  onChange={handleChange}
+                >
+                  <option value="">Selecione uma opção</option>
+                  {selectOptions.map((opt) => (
+                    <option key={opt.value} value={opt.value}>
+                      {opt.label}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id={field.name}
+                  name={field.name}
+                  type={field.inputType}
+                  value={formData[field.name]}
+                  onChange={handleChange}
+                />
+              )}
+            </div>
+          ))}
 
-        <div className="
-        grid
-        grid-cols-subgrid
-        gap-8
-
-        ">
-
-
+        </form>
         <button className="flex items-center shadow-lg justify-center p-4 bg-[#1348D0] rounded-md w-[177px] h-[39px]" >Salvar rascunho</button>
 
-        <button className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">Enviar documentos</button>
-    
-        </div>
 
-      </form>
-   
-  
+        <button className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">Enviar documentos</button>
+
+      </div>
+
     </section>
   );
 }
