@@ -28,7 +28,7 @@ export default function sobre() {
           max-w-96">
 
           <label 
-          className="block text-gray-700 font-bold mb-2 " >
+          className="block text-gray-700 font-bold m-2 py-1 " >
           Acessar sua conta
           </label>
 
@@ -50,19 +50,19 @@ export default function sobre() {
           name=""
           />
 
-          <label htmlFor="" className=" text-gray-700 m-2">Esqueceu sua senha?
+          <label htmlFor="" className=" text-gray-700 m-2 py-1 " >Esqueceu sua senha?
           <a href="" className="text-blue-700"
           > Redefinir senha</a>
           </label>
 
-          <button className="flex items-center shadow-lg justify-center p-4 bg-[#1348D0] rounded-md w-[177px] h-[39px]">
+          <button className="flex items-center shadow-lg justify-center py-4 bg-[#1348D0] rounded-md w-[177px] h-[39px] m-1" >
             Entrar
           </button>
 
           <label htmlFor=""
-          className=" text-gray-700 m-2"
+          className=" text-gray-700  py-1"
           >Não possui uma conta? 
-          <a href=""className="text-blue-700"
+          <a href="/creatAccount"className="text-blue-700"
           > Crie sua conta.
           </a>
           </label>
