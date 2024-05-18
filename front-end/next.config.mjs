@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: "/envio-documentos",
-        destination: "/send-form",
+        destination: "/sendform",
         permanent: true,
       },
     ];
