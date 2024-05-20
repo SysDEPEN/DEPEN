@@ -1,6 +1,6 @@
 import FooterComponent from "@/components/Footer/footer";
 import HeaderComponent from "@/components/Header/header";
-import MixedForm from "@/components/forms/form";
+import MixedForm from "@/components/forms/MixedForm";
 
 export default function SendDocument() {
     return (

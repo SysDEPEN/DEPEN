@@ -1,4 +1,5 @@
 "use client";
+import StepComp from "@/components/StepComponents/stepComponent";
 import { useState } from "react";
 
 interface FormData {
@@ -146,6 +147,11 @@ export default function MixedForm() {
           <button className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">
             Enviar documentos
           </button>
+        </div>
+        <div className=" mt-10">
+
+          <StepComp></StepComp>
+   
         </div>
       </div>
     </section>
