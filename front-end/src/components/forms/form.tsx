@@ -1,4 +1,6 @@
 "use client";
+import StepComp from "@/components/StepComponents/stepComponent";
+import { stepsProps } from "@/interfaces/stepsProps";
 import { useState } from "react";
 
 interface FormData {
@@ -15,6 +17,7 @@ interface FormField {
   name: string;
   inputType?: string;
 }
+
 
 export default function MixedForm() {
   const [formData, setFormData] = useState<FormData>({
@@ -65,6 +68,11 @@ export default function MixedForm() {
     { type: "select", label: "Assunto", name: "select4" },
   ];
 
+   const steps: stepsProps[] = [
+     { id: 1, name: "Step 1", status: "complete", bg: "" },
+     { id: 2, name: "Step 2", status: "upcoming", bg: ""},
+     { id: 3, name: "Step 3", status: "upcoming", bg: ""},
+   ];
   return (
     <section className=" my-20 w-full flex h-[45vw] justify-center items-center ">
       <div
@@ -146,6 +154,11 @@ export default function MixedForm() {
           <button className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">
             Enviar documentos
           </button>
+        </div>
+        <div className=" mt-10">
+
+          <StepComp steps={steps}/>
+   
         </div>
       </div>
     </section>
