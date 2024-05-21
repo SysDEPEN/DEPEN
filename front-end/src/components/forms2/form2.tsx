@@ -12,64 +12,42 @@ interface FormData {
 }
 
 interface FormField {
-  type: "select" | "input";
+  type: "file" | "input";
   label: string;
   name: string;
   inputType?: string;
 }
 
 export default function MixedForm() {
-  const [formData, setFormData] = useState<FormData>({
+const [formData, setFormData] = useState<FormData>({
     select1: "",
     input1: "",
     select2: "",
     input2: "",
-    select3: "",
     input3: "",
     input4: "",
     input5: "",
     input6: "",
-    select4: "",
-  });
+});
 
-  const handleChange = (
+const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const selectOptions = [
-    { label: "Opção 1", value: "option1" },
-    { label: "Opção 2", value: "option2" },
-    { label: "Opção 3", value: "option3" },
-  ];
+};
 
   const formFields: FormField[] = [
-    {
-      type: "input",
-      label: "Nome completo do visitado",
-      name: "input1",
-      inputType: "text",
-    },
-    {
-      type: "input",
-      label: "RG/RNE do visitado",
-      name: "input2",
-      inputType: "text",
-    },
-    { type: "select", label: "Tipo de visitação", name: "select1" },
-    { type: "input", label: "Telefone", name: "input3", inputType: "text" },
-    { type: "select", label: "Estado", name: "select2" },
-    { type: "select", label: "Cidade", name: "select3" },
-    { type: "input", label: "Bairro", name: "input4", inputType: "text" },
-    { type: "input", label: "Rua", name: "input5", inputType: "text" },
-    { type: "input", label: "Número", name: "input6", inputType: "text" },
-    { type: "select", label: "Assunto", name: "select4" },
+    { type: "file", label: "Cópia autenticada do Documento de identidade", name: "input1", inputType: "file", },
+    { type: "file", label: "Documentos que comprove grau de parentesco com o preso", name: "input2", inputType: "file",},
+    { type: "file", label: "Cópia autenticada do CPF", name: "input3", inputType: "file"},
+    { type: "file", label: "Certidão de antecedentes criminais", name: "input4", inputType: "file" },
+    { type: "file", label: "Comprovante de endereço recente em nome do visitante", name: "input5", inputType: "file" },
+    { type: "file", label: "02 fotos 3x4 recentes", name: "input6", inputType: "file" },
   ];
 
    const steps: stepsProps[] = [
      { id: 1, name: "Step 1", status: "complete", bg: "" },
-     { id: 2, name: "Step 2", status: "upcoming", bg: ""},
+     { id: 2, name: "Step 2", status: "complete", bg: ""},
      { id: 3, name: "Step 3", status: "upcoming", bg: ""},
    ];
   return (
@@ -88,10 +66,8 @@ export default function MixedForm() {
       >
         <form
           className="
-          grid
-          grid-flow-col
-          grid-rows-5
-          gap-8 
+            flex
+            flex-col
           
           m-2
           mb-2
@@ -106,7 +82,7 @@ export default function MixedForm() {
               >
                 {field.label}
               </label>
-              {field.type === "select" ? (
+              {field.type === "input" ? (
                 <select
                   className="
                   shadow 
