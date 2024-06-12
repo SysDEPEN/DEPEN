@@ -36,17 +36,7 @@ CREATE TABLE IF NOT EXISTS tb_login(
 	FOREIGN KEY(id_admin) REFERENCES tb_admin(id)
 );
 
-CREATE TABLE IF NOT EXISTS tb_subject(
-	id SERIAL PRIMARY KEY,
-	subject VARCHAR(256),
-	id_user SERIAL NOT NULL,
-	id_inmost_visit SERIAL NOT NULL,
-	created_at timestamp NOT NULL,
-	updated_at timestamp NOT NULL,
 
-	FOREIGN KEY(id_user) REFERENCES tb_user(id),
-	FOREIGN KEY(id_inmost_visit) REFERENCES tb_subject_inmost_visit(id)
-);
 
 CREATE TABLE IF NOT EXISTS tb_subject_inmost_visit(
 	id SERIAL PRIMARY KEY,
@@ -58,6 +48,18 @@ CREATE TABLE IF NOT EXISTS tb_subject_inmost_visit(
 	created_at timestamp NOT NULL,
 	updated_at timestamp NOT NULL,
 	FOREIGN KEY(id_user) REFERENCES tb_user(id)
+);
+
+CREATE TABLE IF NOT EXISTS tb_subject(
+	id SERIAL PRIMARY KEY,
+	subject VARCHAR(256),
+	id_user SERIAL NOT NULL,
+	id_inmost_visit SERIAL NOT NULL,
+	created_at timestamp NOT NULL,
+	updated_at timestamp NOT NULL,
+
+	FOREIGN KEY(id_user) REFERENCES tb_user(id),
+	FOREIGN KEY(id_inmost_visit) REFERENCES tb_subject_inmost_visit(id)
 );
 
 CREATE TABLE IF NOT EXISTS tb_documents(
