@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS tb_subject(
 
 CREATE TABLE IF NOT EXISTS tb_documents(
     id SERIAL PRIMARY KEY,
-    documentos TEXT[],
+    documentos varchar(256),
     created_at timestamp NOT NULL,
     updated_at timestamp NOT NULL,
     id_user SERIAL NOT NULL,
@@ -84,6 +84,7 @@ CREATE TABLE IF NOT EXISTS tb_address(
 
     FOREIGN KEY (id_user) REFERENCES tb_user(id)
 );
+
 CREATE TABLE IF NOT EXISTS protocolos(
     id SERIAL PRIMARY KEY,
     created_at timestamp NOT NULL,
