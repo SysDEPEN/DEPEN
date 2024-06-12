@@ -126,9 +126,9 @@ const handleChange = (
             Salvar rascunho
           </button>
 
-          <button className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">
+          <a href="/completeSendForm" className="flex items-center shadow-lg justify-center p-4 bg-[#009D3F] rounded-md w-[177px] h-[39px]">
             Enviar documentos
-          </button>
+          </a>
         </div>
         <div className=" mt-10">
 

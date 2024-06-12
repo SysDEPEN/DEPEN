@@ -14,6 +14,7 @@ export default function HeaderComponent() {
             Documentos
           </a>
           <a className="py-4 px-4 uppercase">Sobre</a>
+          <a href="/statusProtocol" className="py-4 px-4 uppercase">Requerimento</a>
         </div>
         <div className="flex px-2 items-center justify-end">
           <button className="flex items-center shadow-lg justify-center p-4 bg-[#1348D0] rounded-md w-[177px] h-[39px]">
