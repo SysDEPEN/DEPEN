@@ -30,6 +30,4 @@ public class Admin {
     @Column(name = "updated_at")
     private Date updatedAt;
 
-    @OneToOne(mappedBy = "tb_Admin", cascade = CascadeType.ALL)
-    private Admin Admin;
 }
