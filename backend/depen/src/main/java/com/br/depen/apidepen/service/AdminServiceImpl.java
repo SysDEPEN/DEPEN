@@ -3,6 +3,9 @@ package com.br.depen.apidepen.service;
 import com.br.depen.apidepen.model.Admin;
 import com.br.depen.apidepen.repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,4 +41,5 @@ public class AdminServiceImpl implements AdminService{
     public void deleteById(Long id) {
         adminRepository.deleteById(id);
     }
+
 }
