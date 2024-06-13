@@ -2,6 +2,7 @@
 import FooterComponent from "@/components/Footer/footer";
 import HeaderComponent from "@/components/Header/header";
 import { UserProps } from "@/interfaces/userProps";
+
 import api from "@/services/api";
 import { FormEvent, useState } from "react";
 
@@ -109,6 +110,7 @@ export default function createAccount() {
               <option value="DEFAULT" disabled selected>
                 Selecione seu gênero
               </option>
+              
               <option
                 onChange={(e) => setGender(e.currentTarget.value)}
                 value="masculino"
