@@ -8,6 +8,7 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -47,10 +48,10 @@ public class SecuritConfig {
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
-                .cors().disable()
+                .cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests().requestMatchers("api/v1/logins/login").permitAll()
                 .anyRequest().authenticated().and()
-                .csrf().disable()
+                .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().authenticationProvider(authenticationProvider())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
