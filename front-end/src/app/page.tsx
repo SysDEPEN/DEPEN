@@ -27,7 +27,7 @@ export default function Home() {
                     </p>
                     <div className="mt-10 flex items-center gap-x-6">
                       <a
-                        href="#"
+                        href="/login"
                         className="
                           rounded-md 
                           w-[180px]
