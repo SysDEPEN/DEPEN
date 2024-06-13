@@ -3,13 +3,16 @@ package com.br.depen.apidepen.service;
 import com.br.depen.apidepen.model.Login;
 import com.br.depen.apidepen.repository.LoginRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class LoginServiceImpl implements LoginService{
+public class LoginServiceImpl implements LoginService, UserDetailsService {
 
     @Autowired
     private LoginRepository loginRepository;
@@ -37,5 +40,10 @@ public class LoginServiceImpl implements LoginService{
     @Override
     public void deleteById (Long id) {
         loginRepository.deleteById(id);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return loginRepository.findByNome(username);
     }
 }

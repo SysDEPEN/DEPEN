@@ -1,6 +1,7 @@
 package com.br.depen.apidepen.controller;
 
 import com.br.depen.apidepen.model.Login;
+import com.br.depen.apidepen.service.AuthService;
 import com.br.depen.apidepen.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,15 @@ public class LoginController {
 
     @Autowired
     private LoginService loginService;
+
+    @Autowired
+    private AuthService authService;
+
+    @PostMapping("/login")
+    public ResponseEntity<String> getJwtByLogin(@RequestBody LoginDto login){
+        var token = authService.login(login);
+        return ResponseEntity.ok(token);
+    }
 
     @GetMapping
     public ResponseEntity<List<Login>> findAll() {
