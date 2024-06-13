@@ -84,7 +84,7 @@ export default function MixedForm() {
         max-w-2xl
       shadow-[#afb6bb]
         rounded
-        bg-[#DAE2E8]"
+      bg-[#DAE2E8]"
       >
         <form
           className="

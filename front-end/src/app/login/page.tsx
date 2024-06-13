@@ -1,6 +1,5 @@
 import FooterComponent from "@/components/Footer/footer";
 import HeaderComponent from "@/components/Header/header";
-import MixedForm from "@/components/forms/form";
 
 export default function sobre() {
     return (
@@ -32,8 +31,6 @@ export default function sobre() {
           Acessar sua conta
           </label>
 
-
-
           <input 
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-4 w-64"
           type="email"
@@ -62,7 +59,7 @@ export default function sobre() {
           <label htmlFor=""
           className=" text-gray-700  py-1"
           >Não possui uma conta? 
-          <a href="/creatAccount"className="text-blue-700"
+          <a href="/createAccount"className="text-blue-700"
           > Crie sua conta.
           </a>
           </label>
