@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/admins")
+@CrossOrigin("*")
 public class AdminController {
     @Autowired
     private AdminService adminService;
