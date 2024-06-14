@@ -101,12 +101,7 @@ const handleChange = (
                   value={formData[field.name]}
                   onChange={handleChange}
                 >
-                  <option value="">Selecione uma opção</option>
-                  {selectOptions.map((opt) => (
-                    <option key={opt.value} value={opt.value}>
-                      {opt.label}
-                    </option>
-                  ))}
+                  
                 </select>
               ) : (
                 <input
